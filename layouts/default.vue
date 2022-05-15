@@ -16,6 +16,8 @@ const {
         'grid-cols-with-side': hasSideBar,
         'grid-cols-no-side': !hasSideBar,
       }"
+      text="center"
+      justify="center"
     >
       <!-- 侧边导航.次级导航 -->
       <div v-if="hasSideBar" min-h-screen>
@@ -46,7 +48,7 @@ const {
           </nav>
         </aside>
       </div>
-      <main flex="grow" p="t-4rem x-4" max-w-1140px>
+      <main p="t-4rem x-4" max-w-640px>
         <slot />
         <Footer />
         <div class="mt-5 mx-auto text-center opacity-25 text-sm">
@@ -60,10 +62,10 @@ const {
 <style>
 .grid-cols-with-side{
   grid-template-columns: 160px 1fr;
-  grid-template-rows: 1fr
+  /* grid-template-rows: 1fr */
 }
 .grid-cols-no-side{
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: 1fr */
 }
 </style>

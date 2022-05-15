@@ -3,18 +3,27 @@ defineProps({})
 </script>
 
 <template>
-  <div>
-    <div>contact us</div>
-    <div h-50vh bg-red-200>
+  <div w-500px grid grid-cols-2 justify-center>
+    <div class="box">
       contact us
     </div>
-    <div h-50vh bg-red-300>
+    <div class="box">
       contact us
     </div>
-    <div h-50vh bg-red-400>
+    <div class="box">
+      contact us
+    </div>
+    <div class="box">
       contact us
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  margin: 10px;
+}
+</style>
