@@ -7,7 +7,7 @@ const {
 </script>
 
 <template>
-  <i-layout>
+  <i-layout w-full>
     <!-- 顶部栏主导航 -->
     <NavHeader sticky top-0 />
     <i-layout vertical>
@@ -38,9 +38,6 @@ const {
       <i-layout-content>
         <slot />
         <Footer />
-        <div class="mt-5 mx-auto text-center opacity-25 text-sm">
-          [Home Layout]
-        </div>
       </i-layout-content>
     </i-layout>
   </i-layout>
