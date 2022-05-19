@@ -3,10 +3,10 @@ defineProps({})
 </script>
 
 <template>
-  <div w-500px grid grid-cols-2 justify-center>
-    <div class="box">
+  <div>
+    <i-button>
       contact us
-    </div>
+    </i-button>
     <div class="box">
       contact us
     </div>

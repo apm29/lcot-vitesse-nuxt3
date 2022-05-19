@@ -7,9 +7,7 @@ const {
 </script>
 
 <template>
-  <header
-    fixed
-    top-0
+  <i-layout-header
     w-screen
     overflow="x-auto"
     flex="~ shrink-0"
@@ -35,5 +33,5 @@ const {
         <i :class="routeItem.icon" text-lg inline-block />{{ routeItem.label }}
       </a>
     </nav>
-  </header>
+  </i-layout-header>
 </template>
