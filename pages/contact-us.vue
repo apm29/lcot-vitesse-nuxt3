@@ -3,26 +3,19 @@ defineProps({})
 </script>
 
 <template>
-  <div>
-    <VButton>123</VButton>
-    <VButton bordered>
-      123
-    </VButton>
-    <VButton text>
-      123
-    </VButton>
-    <VButton ghost>
-      123
-    </VButton>
-    <VButton type="primary">
-      123
-    </VButton>
-    <VButton type="info">
-      123
-    </VButton>
-    <VButton type="info" loading>
-      123
-    </VButton>
+  <div w-500px grid grid-cols-2 justify-center>
+    <div class="box">
+      contact us
+    </div>
+    <div class="box">
+      contact us
+    </div>
+    <div class="box">
+      contact us
+    </div>
+    <div class="box">
+      contact us
+    </div>
   </div>
 </template>
 
