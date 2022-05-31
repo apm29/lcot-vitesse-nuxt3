@@ -7,6 +7,10 @@ useHead({
   bodyAttrs: {
     class: 'app',
   },
+  script: [{
+    src: '//unpkg.com/spacingjs',
+    defer: true,
+  }],
 })
 </script>
 
@@ -22,6 +26,8 @@ body,
 #__nuxt {
   height: 100vh;
   width: 100vw;
+  overflow-y: auto;
+  overflow-x: auto;
   margin: 0;
   padding: 0;
 }
@@ -40,10 +46,5 @@ html.dark {
     --color--primary--h: 195deg;
     --color--primary--s: 77%;
     --color--primary--l: 39%;
-}
-
-html {
-  width: 100vw;
-  height: 100vh;
 }
 </style>

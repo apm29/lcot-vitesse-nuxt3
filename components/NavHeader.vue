@@ -8,7 +8,6 @@ const {
 
 <template>
   <i-layout-header
-    w-screen
     overflow="x-auto"
     flex="~ shrink-0"
     shadow="lg"
@@ -17,21 +16,36 @@ const {
     border="r gray-300"
     items="center"
     z="30"
+    p="x-2"
+    gap="x-3"
   >
-    <nav v-for="routeItem of routes" :key="routeItem.label">
-      <a
-        :href="routeDefaultPath(routeItem)"
+    <Logos />
+    <nav v-for="routeItem of routes" :key="routeItem.label" h-full>
+      <NuxtLink
+        :to="routeDefaultPath(routeItem)"
         flex="~"
         items="center"
-        p="x-2 y-1"
+        h-full
         gap="x-2"
         text-link-button
+        decoration-none
+        hover:decoration-none
         :class="{
-          'text-blue-700': isActive(routeItem),
+          active: isActive(routeItem),
         }"
       >
-        <i :class="routeItem.icon" text-lg inline-block />{{ routeItem.label }}
-      </a>
+        {{ routeItem.label }}
+      </NuxtLink>
     </nav>
   </i-layout-header>
 </template>
+
+<style scoped>
+.active {
+  @apply text-blue-700 opacity-100 relative;
+}
+.active:after{
+  content:"";
+  @apply bg-blue-700 absolute bottom-0 left-3/100 right-3/100 h-3px;
+}
+</style>
