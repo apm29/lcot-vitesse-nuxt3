@@ -41,4 +41,9 @@ html.dark {
     --color--primary--s: 77%;
     --color--primary--l: 39%;
 }
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
 </style>

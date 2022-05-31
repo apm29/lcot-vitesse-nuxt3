@@ -7,7 +7,7 @@ const {
 </script>
 
 <template>
-  <i-layout w-full>
+  <i-layout w-full bg="gray-200" items="center">
     <!-- 顶部栏主导航 -->
     <NavHeader sticky top-0 />
     <i-layout vertical>
@@ -35,10 +35,20 @@ const {
           </a>
         </nav>
       </i-layout-aside>
-      <i-layout-content>
-        <slot />
-        <Footer />
-      </i-layout-content>
+      <i-layout>
+        <i-layout-content
+          xl:max-w-900px
+          lg:max-w-700px
+          md:max-w-600px
+          sm:max-w-90vw
+          bg="white"
+        >
+          <slot />
+          <i-layout-footer>
+            <Footer />
+          </i-layout-footer>
+        </i-layout-content>
+      </i-layout>
     </i-layout>
   </i-layout>
 </template>

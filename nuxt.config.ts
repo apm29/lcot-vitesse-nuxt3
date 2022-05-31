@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   inkline: {
-
+    colorMode: 'light',
+    locale: 'zhCN',
   },
 })
