@@ -20,31 +20,25 @@ const {
     gap="x-3"
   >
     <Logos />
-    <nav v-for="routeItem of routes" :key="routeItem.label" h-full>
-      <NuxtLink
-        :to="routeDefaultPath(routeItem)"
-        flex="~"
-        items="center"
+    <i-nav h-full>
+      <i-nav-item
+        v-for="routeItem of routes"
+        :key="routeItem.label"
         h-full
-        gap="x-2"
-        text-link-button
-        decoration-none
-        hover:decoration-none
-        :class="{
-          active: isActive(routeItem),
-        }"
+        :active="isActive(routeItem)"
+        :to="routeDefaultPath(routeItem)"
       >
         {{ routeItem.label }}
-      </NuxtLink>
-    </nav>
+      </i-nav-item>
+    </i-nav>
   </i-layout-header>
 </template>
 
 <style scoped>
-.active {
-  @apply text-blue-700 opacity-100 relative;
+.-active {
+  @apply !text-blue-700 opacity-100 relative;
 }
-.active:after{
+.-active:after{
   content:"";
   @apply bg-blue-700 absolute bottom-0 left-3/100 right-3/100 h-3px;
 }

@@ -11,6 +11,10 @@ useHead({
     src: '//unpkg.com/spacingjs',
     defer: true,
   }],
+  link: [{
+    rel: 'icon',
+    href: '/favicon.ico',
+  }],
 })
 </script>
 
@@ -35,6 +39,13 @@ body,
 html.dark {
   /* background: #222; */
   /* color: white; */
+}
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
 </style>
 
