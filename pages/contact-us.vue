@@ -3,7 +3,60 @@ defineProps({})
 </script>
 
 <template>
-  <div>
+  <div
+    class="contact-us-page"
+    from-dark-800
+    to-sky-400
+    h-screen
+    overflow="hidden"
+    flex
+    flex-col
+    items-center
+    justify-center
+    bg-gradient-to-tl
+    transition="all 0.3s ease-in-out"
+    relative
+  >
+    <div
+      absolute
+      top="-45rem"
+      left="-45rem"
+      overflow="visible"
+      rounded-full
+      bg="yellow-500/30"
+      w-64rem
+      h-64rem
+    />
+    <div
+      absolute
+      top="50%"
+      right="-100rem"
+      overflow="visible"
+      rounded-full
+      bg="lime-500/30"
+      w-128rem
+      h-128rem
+    />
+    <div
+      absolute
+      top="-12"
+      right="-12"
+      overflow="visible"
+      rounded-full
+      bg="orange-500/30"
+      w-18rem
+      h-18rem
+    />
+    <div
+      absolute
+      top="80vh"
+      right="-70rem"
+      overflow="visible"
+      rounded-full
+      bg="red-500/30"
+      w-196rem
+      h-196rem
+    />
     <i-button>
       contact us
     </i-button>
