@@ -9,7 +9,7 @@ const {
 <template>
   <i-layout-header
     overflow="x-auto"
-    flex="~ shrink-0"
+    flex="~ shrink-0 nowrap"
     shadow="lg"
     bg="white"
     h="4rem"
@@ -20,7 +20,7 @@ const {
     gap="x-3"
   >
     <Logos />
-    <i-nav h-full>
+    <i-nav h-full flex="~ shrink-0 nowrap">
       <i-nav-item
         v-for="routeItem of routes"
         :key="routeItem.label"
