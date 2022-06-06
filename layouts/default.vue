@@ -36,4 +36,11 @@ const {
 @include i-layout-aside() {
   ----width: 160px !important;
 }
+
+@include i-input() {
+  ----background: rgba(222,222,222,0.5) !important;
+  ----placeholder--color: rgba(255, 255, 255, 0.8) !important;
+  ----border-color--focus: rgb(100, 92, 202) !important;
+  ----border-width: 1.5px !important;
+}
 </style>

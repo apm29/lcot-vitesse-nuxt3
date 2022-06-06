@@ -57,6 +57,12 @@ defineProps({})
       w-196rem
       h-196rem
     />
+    <h1 text="!white !3xl" font="bold" m="b-6">
+      Contact Us
+    </h1>
+    <h2 text="!white base" m="b-3">
+      Get in touch with our team to discuss your plan.
+    </h2>
     <ContactForm />
   </div>
 </template>
