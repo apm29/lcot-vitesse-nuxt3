@@ -26,7 +26,7 @@ const {
       </i-layout>
     </i-layout>
     <i-layout-footer>
-      <Footer />
+      <ContactUsFooter />
     </i-layout-footer>
   </i-layout>
 </template>

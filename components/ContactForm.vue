@@ -4,7 +4,8 @@ const name = ref()
 const country = ref()
 const email = ref()
 const inquiry = ref()
-function handleSubmit(formData) {
+const loading = ref(false)
+function handleSubmit() {
   emits('submit', {
     name: unref(name),
     country: unref(country),
@@ -28,7 +29,7 @@ function handleSubmit(formData) {
       <i-textarea v-model="inquiry" placeholder="your inquiry here..." />
     </i-form-group>
     <i-form-group>
-      <i-button color="facebook" block @click="handleSubmit">
+      <i-button :loading="loading" color="facebook" block @click="handleSubmit">
         Submit
       </i-button>
     </i-form-group>
