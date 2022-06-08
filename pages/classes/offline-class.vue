@@ -1,17 +1,15 @@
 <script setup></script>
 
 <template>
-  <div>
-    <div>offline</div>
-    <div h-50vh bg-teal-200 w-200vw>
-      team
-    </div>
-    <div h-50vh bg-teal-300>
-      team
-    </div>
-    <div h-50vh bg-teal-400>
-      team
-    </div>
+  <div p="x-6">
+    <article class="prose pt-10 prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto">
+      <h1>Chinese traditional culture courses</h1>
+      <p>
+        TODO
+      </p>
+      <h1>Manual experience courses</h1>
+      <ModuleArticle :module="3" />
+    </article>
   </div>
 </template>
 

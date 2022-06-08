@@ -4,11 +4,6 @@ enum ContactTypes {
   ONE_ON_ONE_CLASS = 'ONE_ON_ONE_CLASS',
   CONTACT_US = 'CONTACT_US',
 }
-interface JavaResponse<T> {
-  code: number
-  msg: string
-  data: T
-}
 
 export function generateUUID() {
   const s: string[] = []
