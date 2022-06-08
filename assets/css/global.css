@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: "Chinyen";
+  font-weight: normal;
+  src: url("~/assets/font/Chinyen.ttf") format("truetype");
+}
+
+.chinyen {
+  font-style: normal;
+  font-family: "Chinyen", cursive!important;
+}
