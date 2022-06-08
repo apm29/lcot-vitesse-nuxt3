@@ -1,0 +1,32 @@
+<script setup>
+const { handleContact, ContactTypes } = useContact()
+</script>
+
+<template>
+  <div relative>
+    <img object-cover src="/dashboard-bg.jpeg" class="bg-img" filter="~ grayscale-100">
+    <div
+      class="container-cover" absolute top-0 left-0 bottom-0 right-0
+      flex="~ col" items="center" justify="center"
+      bg="gray-100 opacity-55" gap="y-3"
+    >
+      <h2 text="3xl dark-300 center" font-extrabold>
+        Study Mandarin Chinese On Tour For Fun
+      </h2>
+      <h3 text="xl dark-200 center">
+        Want to learn Chinese?
+      </h3>
+      <div flex="~" items="center" gap="x-3">
+        <i-button color="twitter" rounded-full @click="handleContact(ContactTypes.GET_STARTED)">
+          Get Started
+        </i-button>
+        <i-button color="twitter" rounded-full @click="handleContact(ContactTypes.ONE_ON_ONE_CLASS)">
+          1 on 1 Class
+        </i-button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+</style>
