@@ -1,5 +1,5 @@
-<script setup>
-const { handleContact, ContactTypes } = useContact()
+<script setup lang="ts">
+const { travelToContact, ContactTypes } = useContact()
 </script>
 
 <template>
@@ -17,10 +17,10 @@ const { handleContact, ContactTypes } = useContact()
         Want to learn Chinese?
       </h3>
       <div flex="~" items="center" gap="x-3">
-        <i-button color="twitter" rounded-full @click="handleContact(ContactTypes.GET_STARTED)">
+        <i-button color="twitter" rounded-full @click="travelToContact(ContactTypes.GET_STARTED)">
           Get Started
         </i-button>
-        <i-button color="twitter" rounded-full @click="handleContact(ContactTypes.ONE_ON_ONE_CLASS)">
+        <i-button color="twitter" rounded-full @click="travelToContact(ContactTypes.ONE_ON_ONE_CLASS)">
           1 on 1 Class
         </i-button>
       </div>

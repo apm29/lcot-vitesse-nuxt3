@@ -22,4 +22,14 @@ export default defineNuxtConfig({
     colorMode: 'light',
     locale: 'zhCN',
   },
+  vite: {
+    server: {
+      proxy: {
+        '/java': {
+          target: 'http://lcot-hangzhou.com',
+          changeOrigin: true,
+        },
+      },
+    },
+  },
 })

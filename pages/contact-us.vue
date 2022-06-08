@@ -1,5 +1,6 @@
-<script setup>
-defineProps({})
+<script setup lang="ts">
+const route = useRoute()
+const { ContactTypes } = useContact()
 </script>
 
 <template>
@@ -7,7 +8,8 @@ defineProps({})
     class="contact-us-page"
     from-dark-800
     to-sky-400
-    h-screen
+    min-h-screen
+    p="b-48 t-12"
     overflow="hidden"
     flex
     flex-col
@@ -57,10 +59,21 @@ defineProps({})
       w-196rem
       h-196rem
     />
-    <h1 text="!white !3xl" font="bold" m="b-6">
+    <h1 text="white !3xl center" font="bold" m="b-6" z="30">
       Contact Us
     </h1>
-    <h2 text="!white base" m="b-3">
+
+    <div v-if="route.query.type === ContactTypes.ONE_ON_ONE_CLASS" p="x-4" m="b-3" z="30">
+      <h2 text="white lg center" font="bold" m="b-3">
+        Online Chinese Class with Private Teachers
+      </h2>
+      <h5 text="white center">
+        Want to study Chinese courses online with a private tutor ? We have French/Spanish/English teachers, they are all our star teachers who made our students' favorite Chinese lessons. Now you can take 1-on-1 online class with any of those tutors to help you study and speak Mandarin Chinese better.
+        Our teachers' classes can be taught one on one via Skype or WeChat. All lessons can proceed at your schedule time and your own pace.
+        Send us a message to schedule your private lessons or ask for more information.
+      </h5>
+    </div>
+    <h2 v-else text="white lg center" font="bold" m="b-3" z="30">
       Get in touch with our team to discuss your plan.
     </h2>
     <ContactForm />
