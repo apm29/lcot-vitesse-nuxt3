@@ -1,5 +1,14 @@
 <script setup>
+const props = defineProps({
+  dark: {
+    type: Boolean,
+    default: false,
+  },
+})
 const emits = defineEmits(['submit'])
+const placeholderColor = computed(() => {
+  return !props.dark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(41, 34, 34, 0.8)'
+})
 const name = ref()
 const country = ref()
 const email = ref()
@@ -90,5 +99,15 @@ async function handleSubmit() {
 <style scoped>
 :deep(.input){
   backdrop-filter: blur(8px) !important;
+}
+</style>
+
+<style scoped lang="scss">
+@import '@inkline/inkline/css/mixins';
+@include i-input() {
+  ----background: rgba(222,222,222,0.5) !important;
+  ----placeholder--color: v-bind(placeholderColor) !important;
+  ----border-color--focus: rgb(100, 92, 202) !important;
+  ----border-width: 1.5px !important;
 }
 </style>

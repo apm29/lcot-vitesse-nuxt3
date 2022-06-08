@@ -76,6 +76,6 @@ const { ContactTypes } = useContact()
     <h2 v-else text="white lg center" font="bold" m="b-3" z="30">
       Get in touch with our team to discuss your plan.
     </h2>
-    <ContactForm />
+    <ContactForm :dark="false" />
   </div>
 </template>

@@ -84,7 +84,7 @@ const teachers = [
       <div class="mt-4 text-sm font-bold text-gray-300">
         Students Says...
       </div>
-      <div text="gray-500" font="sans" break-all indent="xl">
+      <div text="gray-500" font="sans" break-all indent="xl" leading-snug>
         {{ teacher.desc }}
       </div>
     </div>
