@@ -86,3 +86,9 @@ async function handleSubmit() {
     </i-modal>
   </i-form>
 </template>
+
+<style scoped>
+:deep(.input){
+  backdrop-filter: blur(8px) !important;
+}
+</style>

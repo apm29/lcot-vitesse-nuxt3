@@ -9,7 +9,7 @@ const { ContactTypes } = useContact()
     from-dark-800
     to-sky-400
     min-h-screen
-    p="b-48 t-12"
+    p="b-48 t-12 x-4"
     overflow="hidden"
     flex
     flex-col
@@ -63,7 +63,7 @@ const { ContactTypes } = useContact()
       Contact Us
     </h1>
 
-    <div v-if="route.query.type === ContactTypes.ONE_ON_ONE_CLASS" p="x-4" m="b-3" z="30">
+    <div v-if="route.query.type === ContactTypes.ONE_ON_ONE_CLASS" m="b-3" z="30">
       <h2 text="white lg center" font="bold" m="b-3">
         Online Chinese Class with Private Teachers
       </h2>

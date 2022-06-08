@@ -9,17 +9,19 @@ const {
 <template>
   <i-layout bg="gray-200" items="stretch">
     <!-- 顶部栏主导航 -->
-    <NavHeader sticky top-0 />
+    <NavHeader sticky top-0 z-50 />
     <i-layout vertical self="center" style="min-height: calc(100vh - 10rem);">
       <!-- 侧边导航.次级导航 -->
-      <NavSider />
+      <NavSider class="md:!block !hidden" />
       <i-layout>
         <i-layout-content
           xl:w-900px
-          lg:w-700px
-          md:w-600px
-          sm:w-90vw
+          lg:w-750px
+          md:w-650px
+          sm:w-full
+          w-full
           bg="white"
+          transition="all duration-450"
         >
           <slot />
         </i-layout-content>

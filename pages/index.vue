@@ -15,7 +15,7 @@ const loading = ref(false)
 </script>
 
 <template>
-  <div text-center p="!6">
+  <div text-center>
     <DashboardPublicityFigure />
     <Logos mb-6 />
     <Suspense>
