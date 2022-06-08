@@ -1,5 +1,6 @@
-export async function useModuleArticles(module: number) {
-  const { data } = await useFetch<JavaResponse<PagedData<Article>>>('/java/content/article/get', {
+export function useModuleArticles(module: number) {
+  const rawData = ref()
+  useFetch<JavaResponse<PagedData<Article>>>('/java/content/article/get', {
     method: 'POST',
     body: {
       pageNo: 1,
@@ -9,9 +10,11 @@ export async function useModuleArticles(module: number) {
       searchField: 'module',
       order: 'desc',
     },
+  }).then(({ data }) => {
+    rawData.value = data
   })
   const modules = computed(() => {
-    return data.value.data.records
+    return rawData.value?.data?.records ?? []
   })
 
   return {

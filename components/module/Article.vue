@@ -5,7 +5,21 @@ const props = defineProps({
     required: true,
   },
 })
-const { modules } = useModuleArticles(props.module)
+// const { modules } = useModuleArticles(props.module)
+const { data } = useLazyFetch('/java/content/article/get', {
+  method: 'POST',
+  body: {
+    pageNo: 1,
+    pageSize: 999,
+    sort: 'addTime',
+    search: props.module,
+    searchField: 'module',
+    order: 'desc',
+  },
+})
+const modules = computed(() => {
+  return data.value?.data?.records ?? []
+})
 </script>
 
 <template>
