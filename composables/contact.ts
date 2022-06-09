@@ -1,4 +1,3 @@
-import type { AsyncData } from 'nuxt/dist/app/composables/asyncData'
 enum ContactTypes {
   GET_STARTED = 'GET_STARTED',
   ONE_ON_ONE_CLASS = 'ONE_ON_ONE_CLASS',
@@ -28,26 +27,9 @@ export function useContact() {
     })
   }
   const uuid = ref(generateUUID())
-  function submitContactForm(
-    fullName: string, country: string, email: string, inquiry: string,
-    uuid: string, captcha: string,
-  ): AsyncData<JavaResponse<any>, any> {
-    return useFetch<JavaResponse<any>>('/java/auth/mail/send', {
-      method: 'POST',
-      body: {
-        fullName,
-        country,
-        email,
-        inquiry,
-        uuid,
-        captcha,
-      },
-    })
-  }
   return {
     ContactTypes,
     travelToContact,
-    submitContactForm,
     uuid,
     regenerateUUID: () => {
       uuid.value = generateUUID()

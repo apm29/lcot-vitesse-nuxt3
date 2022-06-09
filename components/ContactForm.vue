@@ -1,4 +1,5 @@
 <script setup>
+import { BASE_URL } from '~~/const'
 const props = defineProps({
   dark: {
     type: Boolean,
@@ -16,7 +17,7 @@ const inquiry = ref()
 const captcha = ref()
 const loading = ref(false)
 const [showCaptcha, toggle] = useToggle()
-const { submitContactForm, uuid, regenerateUUID } = useContact()
+const { uuid, regenerateUUID } = useContact()
 function handleBeforeSubmit() {
   // 邮箱正则
   const emailReg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
@@ -35,18 +36,42 @@ async function handleSubmit() {
   })
   try {
     loading.value = true
-    const { data } = await submitContactForm(
-      unref(name),
-      unref(country),
-      unref(email),
-      unref(inquiry),
-      unref(uuid),
-      unref(captcha),
+    // const { data } = await $fetch('/api/contact', {
+    //   method: 'POST',
+    //   body: {
+    //     fullName: unref(name),
+    //     country: unref(country),
+    //     email: unref(email),
+    //     inquiry: unref(inquiry),
+    //     uuid: unref(uuid),
+    //     captcha: unref(captcha),
+    //   },
+    // })
+    const response = await fetch(
+    `${BASE_URL}/java/auth/mail/send`,
+    {
+      method: 'POST',
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json',
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify({
+        fullName: unref(name),
+        country: unref(country),
+        email: unref(email),
+        inquiry: unref(inquiry),
+        uuid: unref(uuid),
+        captcha: unref(captcha),
+      }),
+    },
     )
-    if (data.value?.code === 200)
-      alert(`Success:${data.value.msg}`)
+    if (response.json()?.code === 200)
+      alert(`Success:${response.json().msg}`)
     else
-      alert(`Error:${data.value.msg}`)
+      alert(`Error:${response.json().msg}`)
 
     toggle()
   }
@@ -84,7 +109,7 @@ async function handleSubmit() {
         Input the captcha:
       </template>
       <div flex="~" items="center" gap="x-3">
-        <img mix-blend-multiply :src="`/java/auth/captcha/image?uuid=${uuid}`" rounded h="3rem" w="12rem" @click="regenerateUUID">
+        <img mix-blend-multiply :src="`${BASE_URL}/java/auth/captcha/image?uuid=${uuid}`" rounded h="3rem" w="12rem" @click="regenerateUUID">
         <input v-model="captcha" text="dark-600 center" flex="grow" h="3rem" rounded name="captcha" placeholder="Enter the image verification code">
       </div>
       <template #footer>
