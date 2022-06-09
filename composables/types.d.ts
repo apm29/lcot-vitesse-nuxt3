@@ -15,5 +15,6 @@ interface Subject {
 interface Article {
   subject: Subject[]
   content: string
+  banner: string
   title: string
 }

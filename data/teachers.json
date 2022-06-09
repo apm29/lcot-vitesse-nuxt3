@@ -1,0 +1,38 @@
+[
+  {
+      "pic": "/teacher/rebecca.png",
+      "name": "Rebecca Yang",
+      "desc": "Teacher Yang is a wonderful teacher,i think her genuine kindness shines through her instruction in the Chinese tour. ",
+      "tag": "English/Chinese Teacher"
+  },
+  {
+      "pic": "/teacher/keran-li.png",
+      "name": "Keran Li",
+      "desc": "Mon professeur est très sérieux et charmant, nous aimons sa passion et son humour.",
+      "tag": "French/Chinese Teacher"
+  },
+  {
+      "pic": "/teacher/ailu.png",
+      "name": "Ailu",
+      "desc": "Ailu es muy amable, simpática y tiene mucha paciencia.",
+      "tag": "Spanish/Chinese Teacher"
+  },
+  {
+      "pic": "/teacher/ling-avatar.jpg",
+      "name": "Ling",
+      "desc": "Ling is great, Cheerful and lively, honest and modest are her attitude during the lessons on tour!",
+      "tag": "English/Chinese Teacher"
+  },
+  {
+      "pic": "/teacher/monica.png",
+      "name": "Monica",
+      "desc": "my teacher Monica has so many years of oral practical experience. She speaks like native speakers ,we had great fun in her lesson on tour.",
+      "tag": "English/Chinese Teacher"
+  },
+  {
+      "pic": "/teacher/drizzle.png",
+      "name": "Drizzle",
+      "desc": "Drizzle‘s lesson atmosphere is stable and interesting，she will give you many surprises example to help you to understand obscure grammar and language point.",
+      "tag": "English/Chinese Teacher"
+  }
+]

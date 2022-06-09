@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@inkline/nuxt',
-    '@nuxt/content',
   ],
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -36,8 +35,5 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  content: {
-    // https://content.nuxtjs.org/api/configuration
   },
 })

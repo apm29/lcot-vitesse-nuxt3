@@ -5,33 +5,17 @@ const props = defineProps({
     required: true,
   },
 })
-// const { modules } = useModuleArticles(props.module)
-const { data } = useLazyFetch('/java/content/article/get', {
-  method: 'POST',
-  body: {
-    pageNo: 1,
-    pageSize: 999,
-    sort: 'addTime',
-    search: props.module,
-    searchField: 'module',
-    order: 'desc',
-  },
-})
-const modules = computed(() => {
-  return data.value?.data?.records ?? []
-})
+const { data: modules } = await useFetch(`/api/module-article/${props.module}`)
 </script>
 
 <template>
   <div>
-    <div v-for="article of modules" :key="article.id" class="px-4 md:px-0">
-      <div class="grid grid-cols-8 gap-3">
-        <img :src="article.banner" alt="banner" height="100%" class="article-image">
-        <ModuleArticleGlance class="pl-3 col-span-5" :article="article" />
-        {{ article }}
-      </div>
-      <hr class="my-4">
-    </div>
+    <template v-for="article of modules" :key="article.id">
+      <ModuleArticleGlance
+        :article="article"
+        p="x-4 md:x-0"
+      />
+    </template>
     <div v-if="!modules || !modules.length" class="text-gray-400">
       暂无内容
     </div>

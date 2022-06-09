@@ -1,4 +1,6 @@
-
+html{
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
 @font-face {
   font-family: "Chinyen";
   font-weight: normal;
