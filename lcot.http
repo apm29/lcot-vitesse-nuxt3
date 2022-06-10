@@ -1,0 +1,10 @@
+POST https://lcot-hangzhou.com/java/auth/mail/send HTTP/1.1
+Content-Type: application/json
+
+{
+  "fullName":"jiawei ying",
+  "country":"中国",
+  "email":"yjw999wow@163.com",
+  "uuid":"a1602b66-dc0c-457b-8efc-019a6d418fc3",
+  "captcha":"dgmj"
+}
