@@ -34,6 +34,7 @@ export default defineNuxtConfig({
           changeOrigin: true,
         },
       },
+      https: true,
     },
   },
 })
