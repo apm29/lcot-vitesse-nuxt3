@@ -48,6 +48,3 @@ a:hover {
   text-decoration: none !important;
 }
 </style>
-
-<style lang="scss">
-</style>

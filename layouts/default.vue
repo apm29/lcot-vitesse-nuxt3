@@ -28,6 +28,3 @@
     </footer>
   </main>
 </template>
-
-<style lang="scss">
-</style>

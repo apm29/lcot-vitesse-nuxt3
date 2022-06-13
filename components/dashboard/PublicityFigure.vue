@@ -27,6 +27,3 @@ const { travelToContact, ContactTypes } = useContact()
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-</style>

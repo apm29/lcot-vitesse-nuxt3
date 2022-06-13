@@ -7,5 +7,3 @@ defineProps({})
     <ModuleArticle :module="6" />
   </div>
 </template>
-
-<style lang="scss" scoped></style>

@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 h1 {
   font-family: 'Chinyen', cursive !important;
 }
