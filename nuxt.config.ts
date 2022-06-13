@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode',
   ],
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -17,9 +16,6 @@ export default defineNuxtConfig({
   },
   unocss: {
     preflight: true,
-  },
-  colorMode: {
-    classSuffix: '',
   },
 
 })

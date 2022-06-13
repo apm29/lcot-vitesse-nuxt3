@@ -7,9 +7,6 @@ const props = defineProps({
   },
 })
 const emits = defineEmits(['submit'])
-const placeholderColor = computed(() => {
-  return !props.dark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(41, 34, 34, 0.8)'
-})
 const name = ref()
 const country = ref()
 const email = ref()
@@ -62,17 +59,17 @@ async function handleSubmit() {
 <template>
   <form>
     <fieldset flex="~" items="center">
-      <input v-model="name" flex="grow" required name="name" placeholder="full name">
+      <q-input v-model="name" :dark="dark" flex="grow" required name="name" placeholder="full name" />
       <span w-2 />
-      <input v-model="country" flex="grow" name="country" placeholder="your country">
+      <q-input v-model="country" :dark="dark" flex="grow" name="country" placeholder="your country" />
     </fieldset>
 
     <fieldset>
-      <input v-model="email" w-full required name="email" placeholder="your email">
+      <q-input v-model="email" :dark="dark" w-full required name="email" placeholder="your email" />
     </fieldset>
 
     <fieldset>
-      <textarea v-model="inquiry" w-full name="inquiry" placeholder="your inquiry here..." />
+      <q-input v-model="inquiry" :dark="dark" type="textarea" w-full name="inquiry" placeholder="your inquiry here..." />
     </fieldset>
     <fieldset>
       <button
@@ -89,23 +86,8 @@ async function handleSubmit() {
 </template>
 
 <style scoped>
-input, textarea{
-  backdrop-filter: blur(8px) !important;
-}
-input, textarea {
-  @apply bg-light-400 border border-gray-300 bg-opacity-50 rounded p-2 focus:outline-2 focus:outline-blue-700 focus:border-none;
-}
-
-input::placeholder {
-  color:v-bind(placeholderColor);
-}
-
-textarea::placeholder {
-  color:v-bind(placeholderColor);
-}
-
 fieldset {
-  @apply mb-2
+ margin-bottom: 0.5rem;
 }
 </style>
 
