@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://lcot-hangzhou.com/'
+export const BASE_URL = '//lcot-hangzhou.com/'

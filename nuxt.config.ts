@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   ],
   experimental: {
     reactivityTransform: true,
-    // viteNode: true,
+    viteNode: false,
   },
   unocss: {
     preflight: true,
@@ -24,17 +24,6 @@ export default defineNuxtConfig({
   },
   inkline: {
     colorMode: 'light',
-    locale: 'zhCN',
-  },
-  vite: {
-    server: {
-      proxy: {
-        '/java': {
-          target: 'http://lcot-hangzhou.com',
-          changeOrigin: true,
-        },
-      },
-      https: true,
-    },
+    // locale: 'zhCN',
   },
 })
