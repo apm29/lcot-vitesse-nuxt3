@@ -18,7 +18,6 @@
     "eslint": "^8.15.0",
     "nuxt": "^3.0.0-rc.3",
     "pinia": "^2.0.14",
-    "sass": "^1.51.0",
     "typescript": "^4.6.4"
   },
   "dependencies": {
