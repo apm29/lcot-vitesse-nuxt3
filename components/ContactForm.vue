@@ -24,12 +24,6 @@ function handleBeforeSubmit() {
   else alert('Please fill in the correct information')
 }
 async function handleSubmit() {
-  emits('submit', {
-    name: unref(name),
-    country: unref(country),
-    email: unref(email),
-    inquiry: unref(inquiry),
-  })
   try {
     loading.value = true
     const response = await fetch(
@@ -44,10 +38,10 @@ async function handleSubmit() {
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: JSON.stringify({
-        fullName: unref(name),
-        country: unref(country),
-        email: unref(email),
-        inquiry: unref(inquiry),
+        fullName: name.value,
+        country: country.value,
+        email: email.value,
+        inquiry: inquiry.value,
       }),
     },
     )
