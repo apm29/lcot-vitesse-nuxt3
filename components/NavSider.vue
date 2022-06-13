@@ -12,7 +12,6 @@ const { isActive, hasSideBar, activeRoute } = useRouteConfigs()
         '-active': isActive(subRoute),
       }"
       p="x-2 y-1"
-      text-sm
       text-gray-500
     >
       {{ subRoute.label }}
@@ -22,7 +21,7 @@ const { isActive, hasSideBar, activeRoute } = useRouteConfigs()
 
 <style scoped>
 .-active {
-  @apply text-blue-700 opacity-100 relative;
+  @apply text-sky-400 opacity-100 relative underline;
 }
 .layout-aside {
   width: 210px;
