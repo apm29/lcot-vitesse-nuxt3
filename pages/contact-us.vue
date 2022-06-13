@@ -59,11 +59,11 @@ const { ContactTypes } = useContact()
       w-196rem
       h-196rem
     />
-    <h1 text="white !3xl center" font="bold" m="b-6" z="30">
+    <h1 text="white !3xl center" font="bold" m="b-6" z="10">
       Contact Us
     </h1>
 
-    <div v-if="route.query.type === ContactTypes.ONE_ON_ONE_CLASS" m="b-3" z="30">
+    <div v-if="route.query.type === ContactTypes.ONE_ON_ONE_CLASS" m="b-3" z="10">
       <h2 text="white lg center" font="bold" m="b-3">
         Online Chinese Class with Private Teachers
       </h2>
