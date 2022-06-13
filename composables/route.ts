@@ -113,7 +113,7 @@ export function useRouteConfigs() {
       return routeItem.path
   }
   const hasSideBar = computed(() => {
-    const activeRouteValue = unref(activeRoute)
+    const activeRouteValue = activeRoute.value
     return activeRouteValue && activeRouteValue.sub && activeRouteValue.sub.length
   })
   return {

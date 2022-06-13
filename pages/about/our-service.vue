@@ -1,9 +1,3 @@
-<script setup></script>
-
-<script setup>
-defineProps({})
-</script>
-
 <template>
   <div text-center p-4 min="h-screen">
     <article class="prose" p="x-4 y-6" text="left">

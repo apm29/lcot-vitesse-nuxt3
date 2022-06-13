@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
-    '@inkline/nuxt',
   ],
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -22,8 +21,5 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-  inkline: {
-    colorMode: 'light',
-    // locale: 'zhCN',
-  },
+
 })

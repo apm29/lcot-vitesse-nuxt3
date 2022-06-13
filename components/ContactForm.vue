@@ -20,8 +20,8 @@ function handleBeforeSubmit() {
   const emailReg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
   if (email.value && name.value && emailReg.test(email.value))
     handleSubmit()
-
-  else alert('Please fill in the correct information')
+  else
+    alert('Please fill in the correct information')
 }
 async function handleSubmit() {
   try {
@@ -60,40 +60,52 @@ async function handleSubmit() {
 </script>
 
 <template>
-  <i-form>
-    <i-form-group inline>
-      <i-input v-model="name" required name="name" placeholder="full name" />
+  <form>
+    <fieldset flex="~" items="center">
+      <input v-model="name" flex="grow" required name="name" placeholder="full name">
       <span w-2 />
-      <i-input v-model="country" name="country" placeholder="your country" />
-    </i-form-group>
+      <input v-model="country" flex="grow" name="country" placeholder="your country">
+    </fieldset>
 
-    <i-form-group>
-      <i-input v-model="email" required name="email" placeholder="your email" />
-    </i-form-group>
+    <fieldset>
+      <input v-model="email" w-full required name="email" placeholder="your email">
+    </fieldset>
 
-    <i-form-group>
-      <i-textarea v-model="inquiry" name="inquiry" placeholder="your inquiry here..." />
-    </i-form-group>
-    <i-form-group>
-      <i-button :loading="loading" color="facebook" block @click="handleBeforeSubmit">
+    <fieldset>
+      <textarea v-model="inquiry" w-full name="inquiry" placeholder="your inquiry here..." />
+    </fieldset>
+    <fieldset>
+      <button
+        bg-sky-500 text-white font-bold rounded w-full
+        outline="focus:none"
+        p="x-4 y-1"
+        :loading="loading" color="facebook" block type="button"
+        @click="handleBeforeSubmit"
+      >
         Submit
-      </i-button>
-    </i-form-group>
-  </i-form>
+      </button>
+    </fieldset>
+  </form>
 </template>
 
 <style scoped>
-:deep(.input){
+input, textarea{
   backdrop-filter: blur(8px) !important;
+}
+input, textarea {
+  @apply bg-light-400 border border-gray-300 bg-opacity-50 rounded p-2 focus:outline-2 focus:outline-blue-700 focus:border-none;
+}
+
+input::placeholder {
+  color:v-bind(placeholderColor);
+}
+
+textarea::placeholder {
+  color:v-bind(placeholderColor);
+}
+
+fieldset {
+  @apply mb-2
 }
 </style>
 
-<style scoped lang="scss">
-@import '@inkline/inkline/css/mixins';
-@include i-input() {
-  ----background: rgba(222,222,222,0.5) !important;
-  ----placeholder--color: v-bind(placeholderColor) !important;
-  ----border-color--focus: rgb(100, 92, 202) !important;
-  ----border-width: 1.5px !important;
-}
-</style>

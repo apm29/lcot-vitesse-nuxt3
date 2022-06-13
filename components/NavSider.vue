@@ -4,15 +4,20 @@ const { isActive, hasSideBar, activeRoute } = useRouteConfigs()
 
 <template>
   <!-- 侧边导航.次级导航 -->
-  <i-nav v-if="hasSideBar" vertical border="r gray-100" bg="white" w="200px">
-    <i-nav-item
+  <nav v-if="hasSideBar" flex="~ col" border="r gray-100" bg="white" w="180px" p="t-6">
+    <router-link
       v-for="subRoute of activeRoute?.sub ?? []" :key="subRoute.label"
-      :active="isActive(subRoute)"
       :to="subRoute.path"
+      :class="{
+        '-active': isActive(subRoute),
+      }"
+      p="x-2 y-1"
+      text-sm
+      text-gray-500
     >
       {{ subRoute.label }}
-    </i-nav-item>
-  </i-nav>
+    </router-link>
+  </nav>
 </template>
 
 <style scoped>

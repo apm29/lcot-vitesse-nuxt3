@@ -21,13 +21,13 @@ const { data: teachers } = useFetch('/api/teachers')
         w="36"
         h="36"
         rounded="full"
-        border="6 blue-300"
+        border="6 sky-400"
         self="center"
         m="b-4"
       >
       <h3
         class="tag"
-        text="xs blue-500"
+        text="xs sky-500"
         m="b-2"
         flex="~"
         items="center"
@@ -37,7 +37,7 @@ const { data: teachers } = useFetch('/api/teachers')
           inline-block w="1"
           h="full"
           rounded="r-2xl"
-          bg="blue-500"
+          bg="sky-500"
         />
         {{ teacher.tag }}
       </h3>

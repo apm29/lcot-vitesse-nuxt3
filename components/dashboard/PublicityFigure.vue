@@ -17,12 +17,12 @@ const { travelToContact, ContactTypes } = useContact()
         Want to learn Chinese?
       </h3>
       <div flex="~" items="center" gap="x-3">
-        <i-button color="twitter" rounded-full @click="travelToContact(ContactTypes.GET_STARTED)">
+        <button bg="sky-400" p="x-3 y-1" text="white" rounded-full @click="travelToContact(ContactTypes.GET_STARTED)">
           Get Started
-        </i-button>
-        <i-button color="twitter" rounded-full @click="travelToContact(ContactTypes.ONE_ON_ONE_CLASS)">
+        </button>
+        <button bg="sky-400" p="x-3 y-1" text="white" rounded-full @click="travelToContact(ContactTypes.ONE_ON_ONE_CLASS)">
           1 on 1 Class
-        </i-button>
+        </button>
       </div>
     </div>
   </div>
