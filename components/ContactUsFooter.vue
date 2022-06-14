@@ -4,7 +4,7 @@
 <template>
   <div
     text="sm gray4"
-    p="y-3 l-4 md:0"
+    p="y-3 l-4"
     flex
     flex-col
     justify-center
