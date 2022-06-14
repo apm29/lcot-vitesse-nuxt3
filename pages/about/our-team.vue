@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>
+  <div p-4 min="h-screen">
     <article class="prose">
       <h1>Rebecca Yang <small>(English<i i-twemoji-flag-united-kingdom />)</small></h1>
       <p>
