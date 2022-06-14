@@ -14,9 +14,13 @@ useHead({
 <template>
   <div p="x-6" min="h-screen" select="none">
     <article class="prose pt-10 prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto">
-      <h1>Chinese traditional culture courses</h1>
+      <h3 m="y-5">
+        Chinese traditional culture courses
+      </h3>
       <ModuleArticle :module="2" />
-      <h1>Manual experience courses</h1>
+      <h3 m="y-5">
+        Manual experience courses
+      </h3>
       <ModuleArticle :module="3" />
     </article>
   </div>

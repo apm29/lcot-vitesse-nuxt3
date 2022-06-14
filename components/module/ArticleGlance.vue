@@ -9,14 +9,23 @@ defineProps({
 </script>
 
 <template>
-  <div class="grid grid-cols-8 gap-3">
+  <div
+    flex="~ col"
+    grid="md:~ md:cols-8" gap="3"
+    m="b-8"
+  >
     <img
       :src="article.banner" alt="article-banner" height="100%"
       col-span-3
       border="~ transparent hover:gray-300 hover:opacity-50"
       shadow="hover:2xl"
     >
-    <article col-span-5 class="text-left flex-col  flex prose items-stretch">
+    <div
+      flex="~ col"
+      items="stretch"
+      text="left"
+      class="col-span-full md:col-span-5 prose"
+    >
       <NuxtLink class="article-title !page-link" :to="`/module/article/${article.id}`" tag="h3">
         {{ article.title }}
       </NuxtLink>
@@ -34,6 +43,6 @@ defineProps({
         </template>
       </p>
       <time class="self-end  dark:text-gray-600 ">{{ filterTime(article.addTime) }}</time>
-    </article>
+    </div>
   </div>
 </template>

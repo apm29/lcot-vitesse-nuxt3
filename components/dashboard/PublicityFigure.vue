@@ -10,7 +10,7 @@ const { travelToContact, ContactTypes } = useContact()
       flex="~ col" items="center" justify="center"
       bg="gray-100 opacity-55" gap="y-3"
     >
-      <h2 text="3xl dark-300 center" font-extrabold>
+      <h2 text="3xl dark-300 center" max="!w-8/10" font-extrabold>
         Study Mandarin Chinese On Tour For Fun
       </h2>
       <h3 text="xl dark-200 center">

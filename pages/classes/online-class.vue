@@ -12,13 +12,14 @@ useHead({
 
 <template>
   <div p="x-6 t-8" select="none">
-    <nav class="tab-header">
+    <nav class="tab-header" w-full flex="~ nowrap" text="sm md:base">
       <button
-        v-for="tab of tabs" :key="tab"
+        v-for="(tab, index) of tabs" :key="tab"
         :class="{ 'active-tab': active === tab }"
         p="x-3 y-1"
         :text="active === tab ? 'gray-700' : 'gray-400'"
         border
+        :rounded="index === 0 ? 'l-lg' : index === 2 ? 'r-lg' : 'none'"
         @click="active = tab"
       >
         {{ tab }}
@@ -95,6 +96,3 @@ useHead({
     </section>
   </div>
 </template>
-
-<style scoped>
-</style>

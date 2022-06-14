@@ -4,11 +4,11 @@
 <template>
   <div
     text="sm gray4"
-    p="y-3"
+    p="y-3 l-4 md:0"
     flex
     flex-col
     justify-center
-    items-center
+    items="start md:center"
   >
     <!-- 联系我们 -->
     <a target="_self" href="mailto:409308758@qq.com">

@@ -38,6 +38,9 @@ const props = defineProps({
 </template>
 
 <style scoped>
+input {
+  min-width: 0 !important;
+}
  input.light::placeholder {
   color:white;
 }

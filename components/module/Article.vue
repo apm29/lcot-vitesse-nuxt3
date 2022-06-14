@@ -13,7 +13,6 @@ const { data: modules } = await useFetch(`/api/module-article/${props.module}`)
     <template v-for="article of modules" :key="article.id">
       <ModuleArticleGlance
         :article="article"
-        p="x-4 md:x-0"
       />
     </template>
     <div v-if="!modules || !modules.length" class="text-gray-400">

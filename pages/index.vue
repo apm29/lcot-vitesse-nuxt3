@@ -8,11 +8,11 @@ useHead({
   <div text-center>
     <DashboardPublicityFigure />
     <div p="x-5">
-      <h1 text="2xl dark-600 left" font="bold" m="t-5">
+      <h1 pl="5" text="2xl dark-600 left" font="bold" m="t-5">
         Meet Our Full-time Mandarin Teachers On tour in Hangzhou
       </h1>
       <DashboardTeachers />
-      <h1 text="2xl dark-600 left" font="bold" m="y-5">
+      <h1 pl="5" text="2xl dark-600 left" font="bold" m="y-5">
         Why Us
       </h1>
       <ol class="why-us__list" text="lg left" m="b-12 x-2rem" font="sans" list="decimal" leading-snug>
@@ -32,7 +32,7 @@ useHead({
       <h2 text="dark-600 lg center" font="bold" m="b-3" z="30">
         Get a free One-on-One trial lesson
       </h2>
-      <div max-w-26rem m="auto">
+      <div m="auto" max="sm:w-24rem w-20rem">
         <ContactForm :dark="true" />
       </div>
       <div h="48" />
