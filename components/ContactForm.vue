@@ -13,6 +13,7 @@ const email = ref()
 const inquiry = ref()
 const loading = ref(false)
 const form = ref()
+
 function handleBeforeSubmit() {
   // 邮箱正则
   const emailReg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
@@ -21,6 +22,7 @@ function handleBeforeSubmit() {
   else
     alert('Please fill in the correct information')
 }
+
 async function handleSubmit() {
   try {
     loading.value = true
@@ -43,11 +45,12 @@ async function handleSubmit() {
       }),
     },
     )
-    if (response.json()?.code === 200) {
-      alert(`Success:${response.json().msg}`)
+    const resJson = await response.json()
+    if (resJson?.code === 200) {
+      alert(`Success:${resJson.msg}`)
       form.value.reset()
     }
-    else { alert(`Error:${response.json().msg}`) }
+    else { alert(`Error:${resJson.msg}`) }
   }
   catch (error) {
     alert(JSON.stringify(error))
