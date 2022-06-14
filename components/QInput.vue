@@ -12,10 +12,6 @@ const props = defineProps({
     default: false,
   },
 })
-
-const placeholderColor = computed(() => {
-  return !props.dark ? 'rgba(255, 255, 255, 0.8)' : 'rgba(41, 34, 34, 0.8)'
-})
 </script>
 
 <template>
@@ -24,6 +20,7 @@ const placeholderColor = computed(() => {
     style=" backdrop-filter: blur(8px) !important"
     :value="modelValue"
     v-bind="$attrs"
+    :class="dark ? 'dark' : 'light'"
     bg-light-400 border border-gray-300 bg-opacity-50 rounded p-2
     focus:outline-2 focus:outline-blue-700 focus:border-none
     @input="$emit('update:modelValue', $event.target.value)"
@@ -33,6 +30,7 @@ const placeholderColor = computed(() => {
     style=" backdrop-filter: blur(8px) !important"
     :value="modelValue"
     v-bind="$attrs"
+    :class="dark ? 'dark' : 'light'"
     bg-light-400 border border-gray-300 bg-opacity-50 rounded p-2
     focus:outline-2 focus:outline-blue-700 focus:border-none
     @input="$emit('update:modelValue', $event.target.value)"
@@ -40,11 +38,19 @@ const placeholderColor = computed(() => {
 </template>
 
 <style scoped>
-input::placeholder {
-  color:v-bind(placeholderColor);
+ input.light::placeholder {
+  color:white;
 }
 
-textarea::placeholder {
-  color:v-bind(placeholderColor);
+ input.dark::placeholder {
+  color:gainsboro;
+}
+
+ textarea.light::placeholder {
+  color:white;
+}
+
+ textarea.dark::placeholder {
+  color:gainsboro;
 }
 </style>
