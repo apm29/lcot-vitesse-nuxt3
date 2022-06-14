@@ -5,6 +5,11 @@ const { ContactTypes } = useContact()
 useHead({
   title: 'Contact Us',
 })
+
+
+definePageMeta({
+  pageTransition: { name: "fade", mode: "out-in" },
+});
 </script>
 
 <template>

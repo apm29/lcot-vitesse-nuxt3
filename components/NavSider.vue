@@ -11,9 +11,16 @@ const { isActive, hasSideBar, activeRoute } = useRouteConfigs()
       :class="{
         '-active': isActive(subRoute),
       }"
-      p="x-2 y-1"
+      p="l-3 r-2 y-1"
       text-gray-500
+      relative
     >
+      <i i-carbon-caret-right 
+      inline-block text="sky-400" 
+      v-show="isActive(subRoute)" 
+      left="-2"
+      top="2"
+      absolute vertical="text-top"/>
       {{ subRoute.label }}
     </router-link>
   </nav>

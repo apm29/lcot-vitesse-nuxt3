@@ -2,6 +2,10 @@
 useHead({
   title: 'Our Service',
 })
+
+definePageMeta({
+  pageTransition: { name: "fade", mode: "out-in" },
+});
 </script>
 
 <template>

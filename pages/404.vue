@@ -3,6 +3,10 @@ const router = useRouter()
 useHead({
   title: 'Not Found',
 })
+
+definePageMeta({
+  pageTransition: { name: "fade", mode: "out-in" },
+});
 </script>
 
 <template>

@@ -2,19 +2,25 @@
 useHead({
   title: 'Dashboard',
 })
+
+definePageMeta({
+  pageTransition: { name: "fade", mode: "out-in" },
+});
 </script>
 
 <template>
   <div text-center>
     <DashboardPublicityFigure />
     <div p="x-5">
-      <h1 pl="5" text="2xl dark-600 left" font="bold" m="t-5">
+      <h3 pl="5" text="xl dark-600 left" font="bold" m="y-16">
+        <i i-carbon-crowd-report text="sky-500" inline-block  vertical="text-top"></i>
         Meet Our Full-time Mandarin Teachers On tour in Hangzhou
-      </h1>
+      </h3>
       <DashboardTeachers />
-      <h1 pl="5" text="2xl dark-600 left" font="bold" m="y-5">
+      <h3 pl="5" text="xl dark-600 left" font="bold" m="y-16">
+        <i i-carbon-crowd-report text="sky-500" inline-block vertical="text-top"></i>
         Why Us
-      </h1>
+      </h3>
       <ol class="why-us__list" text="lg left" m="b-12 x-2rem" font="sans" list="decimal" leading-snug>
         <li>Flexibility – you decide where and when you would like to have your class with our private Mandarin tutor.</li>
         <li>Mandarin Learning Materials – access to all of our course books and online courses.</li>

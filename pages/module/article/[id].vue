@@ -4,6 +4,10 @@ const { data: article } = await useFetch(`/api/article/${route.params.id}`)
 useHead({
   title: article.value ? article.value.title : '加载中',
 })
+
+definePageMeta({
+  pageTransition: { name: "fade", mode: "out-in" },
+});
 </script>
 
 <template>
