@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const route = useRoute()
 const { ContactTypes } = useContact()
+
+useHead({
+  title: 'Contact Us',
+})
 </script>
 
 <template>

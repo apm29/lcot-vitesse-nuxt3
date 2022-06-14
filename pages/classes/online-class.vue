@@ -5,10 +5,13 @@ const tabs = [
   'Customized Courses',
   'Business Chinese',
 ]
+useHead({
+  title: 'Online Class',
+})
 </script>
 
 <template>
-  <div p="x-6 t-8">
+  <div p="x-6 t-8" select="none">
     <nav class="tab-header">
       <button
         v-for="tab of tabs" :key="tab"

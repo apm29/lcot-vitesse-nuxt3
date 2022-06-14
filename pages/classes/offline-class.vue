@@ -6,10 +6,13 @@
 // 5 -> Tongue Twisters
 // 6 -> Traditional Culture
 // 7 -> Spoken Chinese
+useHead({
+  title: 'Offline Class',
+})
 </script>
 
 <template>
-  <div p="x-6" min="h-screen">
+  <div p="x-6" min="h-screen" select="none">
     <article class="prose pt-10 prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto">
       <h1>Chinese traditional culture courses</h1>
       <ModuleArticle :module="2" />

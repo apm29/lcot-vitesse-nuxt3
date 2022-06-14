@@ -1,16 +1,24 @@
 <script setup lang="ts">
 useHead({
-  titleTemplate: 'Nuxt.js - %s', // or, title => `My App - ${title}`
+  titleTemplate: title => title ? `${title} - 旅学中文` : '旅学中文',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
-  meta: [{ name: 'description', content: 'My amazing site.' }],
+  meta: [
+    { name: 'description', content: 'learn chinese on tour.' },
+    { name: 'keywords', content: 'chinese, tour, learn chinese, hangzhou tour, online course, offline course' },
+  ],
   bodyAttrs: {
     class: 'app',
   },
-  script: [{
-    src: '//unpkg.com/spacingjs',
-    defer: true,
-  }],
+  script: [
+    {
+      src: '//unpkg.com/spacingjs',
+      defer: true,
+    },
+    {
+      src: 'https://hm.baidu.com/hm.js?a98e2932a83d9ee1d41ae913f596b377',
+    },
+  ],
   link: [{
     rel: 'icon',
     href: '/favicon.ico',

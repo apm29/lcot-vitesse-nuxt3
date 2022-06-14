@@ -10,9 +10,9 @@
       <NavSider class="md:!flex !hidden" />
       <main>
         <section
-          xl:w-900px
-          lg:w-750px
-          md:w-650px
+          xl:w-980px
+          lg:w-860px
+          md:w-720px
           sm:w-full
           w-full
           bg="white"

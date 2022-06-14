@@ -1,5 +1,11 @@
+<script setup>
+useHead({
+  title: 'HSK1',
+})
+</script>
+
 <template>
-  <article class="prose pt-10 prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto px-4 py-2">
+  <article select="none" class="prose pt-10 prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto px-4 py-2">
     <h1>HSK1 Certificate</h1>
 
     <h2>LEVEL Ⅰ</h2>

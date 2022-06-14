@@ -1,5 +1,7 @@
 <script setup>
-defineProps({})
+useHead({
+  title: 'Tours in HangZhou',
+})
 </script>
 
 <template>

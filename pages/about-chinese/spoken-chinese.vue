@@ -1,5 +1,7 @@
 <script setup>
-defineProps({})
+useHead({
+  title: 'Spoken Chinese',
+})
 </script>
 
 <template>

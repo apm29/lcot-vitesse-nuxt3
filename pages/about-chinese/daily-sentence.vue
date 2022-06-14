@@ -1,5 +1,7 @@
 <script setup>
-defineProps({})
+useHead({
+  title: 'Daily Sentence',
+})
 </script>
 
 <template>

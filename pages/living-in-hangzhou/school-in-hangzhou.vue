@@ -1,5 +1,7 @@
 <script setup>
-defineProps({})
+useHead({
+  title: 'School in HangZhou',
+})
 </script>
 
 <template>

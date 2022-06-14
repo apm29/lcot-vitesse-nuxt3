@@ -1,6 +1,9 @@
 <script setup>
 const route = useRoute()
 const { data: article } = await useFetch(`/api/article/${route.params.id}`)
+useHead({
+  title: article.value ? article.value.title : '加载中',
+})
 </script>
 
 <template>

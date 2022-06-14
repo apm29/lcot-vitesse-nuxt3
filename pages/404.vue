@@ -1,8 +1,14 @@
 <script setup lang="ts">
 const router = useRouter()
+useHead({
+  title: 'Not Found',
+})
 </script>
 
 <template>
+  <Head>
+    <Title>Not Found</Title>
+  </Head>
   <main p="x4 y10" text="center teal-700 dark:gray-200">
     <div text-4xl>
       <div i-carbon-warning inline-block />

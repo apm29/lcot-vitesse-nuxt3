@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+useHead({
+  title: 'Our Team',
+})
+</script>
 
 <template>
   <div p-4 min="h-screen">
