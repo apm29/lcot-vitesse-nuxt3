@@ -63,10 +63,10 @@ async function handleSubmit() {
 
 <template>
   <form ref="form">
-    <fieldset flex="~ md:row col" items="stretch md:center">
-      <q-input v-model="name" :dark="dark" flex="grow" required name="name" placeholder="full name" />
+    <fieldset flex="~ md:row col" items="stretch md:center" max="w-full">
+      <q-input v-model="name" :dark="dark" flex="grow" w="md:1/2" required name="name" placeholder="full name" />
       <span w="2" h="2" />
-      <q-input v-model="country" :dark="dark" flex="grow" name="country" placeholder="your country" />
+      <q-input v-model="country" :dark="dark" flex="grow" w="md:1/2" name="country" placeholder="your country" />
     </fieldset>
 
     <fieldset>
