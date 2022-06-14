@@ -1,6 +1,6 @@
 <script setup>
 import { BASE_URL } from '~~/const'
-const props = defineProps({
+defineProps({
   dark: {
     type: Boolean,
     default: false,
@@ -12,6 +12,7 @@ const country = ref()
 const email = ref()
 const inquiry = ref()
 const loading = ref(false)
+const form = ref()
 function handleBeforeSubmit() {
   // 邮箱正则
   const emailReg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
@@ -29,7 +30,7 @@ async function handleSubmit() {
       method: 'POST',
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
+      credentials: 'include', // include, *same-origin, omit
       headers: {
         'Content-Type': 'application/json',
         // 'Content-Type': 'application/x-www-form-urlencoded',
@@ -42,10 +43,11 @@ async function handleSubmit() {
       }),
     },
     )
-    if (response.json()?.code === 200)
+    if (response.json()?.code === 200) {
       alert(`Success:${response.json().msg}`)
-    else
-      alert(`Error:${response.json().msg}`)
+      form.value.reset()
+    }
+    else { alert(`Error:${response.json().msg}`) }
   }
   catch (error) {
     alert(JSON.stringify(error))
@@ -57,7 +59,7 @@ async function handleSubmit() {
 </script>
 
 <template>
-  <form>
+  <form ref="form">
     <fieldset flex="~" items="center">
       <q-input v-model="name" :dark="dark" flex="grow" required name="name" placeholder="full name" />
       <span w-2 />
