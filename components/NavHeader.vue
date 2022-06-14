@@ -4,6 +4,7 @@ const {
   routeDefaultPath,
   routes,
 } = useRouteConfigs()
+const [showMenu, toggleMenu] = useToggle()
 </script>
 
 <template>
@@ -19,8 +20,9 @@ const {
     p="x-2"
     gap="x-3"
   >
-    <Logos />
-    <nav h-full flex="~ shrink-0 nowrap">
+    <Logo h-3rem inline-block px-4 />
+    <!-- 移动设备隐藏主菜单 -->
+    <nav h-full flex="md:~ shrink-0 nowrap" hidden>
       <router-link
         v-for="routeItem of routes"
         :key="routeItem.label"
@@ -36,6 +38,13 @@ const {
         {{ routeItem.label }}
       </router-link>
     </nav>
+    <div flex="grow" />
+    <nav self="center" md:hidden inline @click="toggleMenu()">
+      <i i-mdi-menu inline-block text="2xl" />
+    </nav>
+    <PartialModal v-model="showMenu">
+      <MobileNav />
+    </PartialModal>
   </header>
 </template>
 
