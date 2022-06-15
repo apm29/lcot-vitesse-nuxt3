@@ -16,7 +16,7 @@
     "@unocss/nuxt": "^0.33.2",
     "@vueuse/nuxt": "^8.4.2",
     "eslint": "^8.15.0",
-    "nuxt": "3.0.0-rc.3",
+    "nuxt": "3.0.0-rc.4",
     "pinia": "^2.0.14",
     "typescript": "^4.6.4"
   },
