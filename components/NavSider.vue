@@ -15,12 +15,14 @@ const { isActive, hasSideBar, activeRoute } = useRouteConfigs()
       text-gray-500
       relative
     >
-      <i i-carbon-caret-right 
-      inline-block text="sky-400" 
-      v-show="isActive(subRoute)" 
-      left="-2"
-      top="2"
-      absolute vertical="text-top"/>
+      <i
+        v-show="isActive(subRoute)"
+        i-carbon-caret-right inline-block
+        text="sky-400"
+        left="-2"
+        top="2"
+        absolute vertical="text-top"
+      />
       {{ subRoute.label }}
     </router-link>
   </nav>

@@ -21,7 +21,7 @@ const { data: teachers } = useFetch('/api/teachers')
         w="36"
         h="36"
         rounded="full"
-        border="6 sky-400"
+        border="6 light-400"
         self="center"
         m="b-4"
       >
