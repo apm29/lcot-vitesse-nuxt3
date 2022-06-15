@@ -16,7 +16,7 @@ useHead({
       defer: true,
     },
     {
-      src: 'https://hm.baidu.com/hm.js?a98e2932a83d9ee1d41ae913f596b377',
+      src: 'https://hm.baidu.com/hm.js?07416ce7e4223fdd5fc5d971e25553b7',
     },
   ],
   link: [{
@@ -55,7 +55,6 @@ a {
 a:hover {
   text-decoration: none !important;
 }
-
 
 .fade-enter-active {
   transition: all 0.3s ease;
