@@ -64,7 +64,7 @@ defineProps({
           outline="none"
           border="none"
           overflow="hidden"
-          text="white"
+          text-white
          :to="`/module/article/${article.id}`" tag="button" class="button-detail" float="right">
           View details
           <i inline-block i-carbon-caret-right vertical="text-top" />
