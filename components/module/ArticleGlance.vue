@@ -55,17 +55,18 @@ defineProps({
       <div m="t-4">
         <time self="end" float="left" text="gray-500 xs">{{ filterTime(article.addTime) }}</time>
         <NuxtLink
-          self="end" 
-          cursor="pointer" 
+          self="end"
+          cursor="pointer"
           relative="~"
           m="r-3 b-3"
-           p="x-2 y-1"
+          p="x-2 y-1"
           bg="opacity-80 purple-600"
           outline="none"
           border="none"
           overflow="hidden"
           text-white
-         :to="`/module/article/${article.id}`" tag="button" class="button-detail" float="right">
+          :to="`/module/article/${article.id}`" tag="button" class="button-detail" float="right"
+        >
           View details
           <i inline-block i-carbon-caret-right vertical="text-top" />
         </NuxtLink>

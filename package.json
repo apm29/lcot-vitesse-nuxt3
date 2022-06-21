@@ -14,7 +14,7 @@
     "@iconify-json/twemoji": "^1.1.4",
     "@pinia/nuxt": "^0.1.9",
     "@unocss/nuxt": "^0.33.2",
-    "@vueuse/nuxt": "^8.4.2",
+    "@vueuse/nuxt": "^8.7.4",
     "eslint": "^8.15.0",
     "nuxt": "3.0.0-rc.4",
     "pinia": "^2.0.14",
