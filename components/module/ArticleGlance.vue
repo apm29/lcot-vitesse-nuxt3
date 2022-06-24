@@ -85,7 +85,7 @@ defineProps({
   padding: 0.5em 1em;
   outline: none;
   border: none;
-  background-color: hsl(270, 71%, 49%);
+  background-color: hsl(207, 71%, 49%);
   overflow: hidden;
   cursor: pointer;
 }
@@ -104,6 +104,6 @@ defineProps({
 
 .button-detail:hover::after {
   transition: transform 0.45s ease-in-out;
-  transform: translate3d(450%, 0, 0) rotate(35deg);
+  transform: translate3d(680%, 0, 0) rotate(35deg);
 }
 </style>
