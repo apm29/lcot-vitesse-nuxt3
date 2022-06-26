@@ -16,7 +16,7 @@ const { data: teachers } = useFetch('/api/teachers')
       border="~ transparent hover:gray-300 hover:opacity-50"
       shadow="hover:2xl"
     >
-      <img
+      <AvatarImage
         :src="teacher.pic"
         w="36"
         h="36"
@@ -24,7 +24,7 @@ const { data: teachers } = useFetch('/api/teachers')
         border="6 light-400"
         self="center"
         m="b-4"
-      >
+      />
       <h3
         class="tag"
         text="xs sky-500"

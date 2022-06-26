@@ -17,7 +17,7 @@ defineProps({
     rounded="xl"
     shadow="hover:2xl"
   >
-    <img
+    <AvatarImage
       :src="article.banner"
       col-span-3
       border="~ transparent"
@@ -25,7 +25,7 @@ defineProps({
       h="!full"
       object="cover"
       :alt="article.title"
-    >
+    />
     <div
       flex="~ col"
       items="stretch"
