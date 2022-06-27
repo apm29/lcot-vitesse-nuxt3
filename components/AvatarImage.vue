@@ -14,7 +14,7 @@ const { isLoading } = useImage({ src: props.src })
 </script>
 
 <template>
-  <div v-if="isLoading" class="loading !w-200px !h-160px">
+  <div v-if="isLoading" class="loading">
     <span class="loading-text">Loading</span>
   </div>
   <img v-else :src="src" v-bind="$attrs">
