@@ -21,7 +21,7 @@ const {
         p="y-2"
         :to="routeDefaultPath(routeItem)"
       >
-        {{ routeItem.label }}
+        {{ $t(routeItem.label) }}
       </router-link>
       <nav v-if="routeItem.sub && routeItem.sub.length" flex="~ col">
         <router-link
@@ -36,7 +36,7 @@ const {
           :to="routeDefaultPath(subItem)"
           class="text-gray-500"
         >
-          {{ subItem.label }}
+          {{ $t(subItem.label) }}
         </router-link>
       </nav>
     </nav>

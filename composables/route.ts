@@ -6,90 +6,90 @@ interface RouteItem {
 }
 const routes: Array<RouteItem> = [
   {
-    label: 'Home',
+    label: 'home',
     path: '/',
     icon: 'i-mdi-home',
   },
   {
-    label: 'About us',
+    label: 'about-us',
     path: '/about',
     icon: 'i-mdi-airplane-takeoff',
     sub: [
       {
-        label: 'Our service',
+        label: 'our-service',
         path: '/about/our-service',
         icon: 'i-mdi-face-agent',
       },
       {
-        label: 'Our team',
+        label: 'our-team',
         path: '/about/our-team',
         icon: 'i-mdi-account-group',
       },
     ],
   },
   {
-    label: 'Course on tours',
+    label: 'course-on-tours',
     icon: 'i-mdi-wallet-travel',
     path: '/classes',
     sub: [
       {
-        label: 'Online class',
+        label: 'online-class',
         path: '/classes/online-class',
         icon: 'i-mdi-television-classic',
       },
       {
-        label: 'Offline class',
+        label: 'offline-class',
         path: '/classes/offline-class',
         icon: 'i-mdi-human-male-board',
       },
     ],
   },
   {
-    label: 'Living in Hangzhou',
+    label: 'live-in-hangzhou',
     path: '/living-in-hangzhou',
     icon: 'i-mdi-city-variant',
     sub: [
       {
-        label: 'School in Hangzhou',
+        label: 'school-in-hangzhou',
         path: '/living-in-hangzhou/school-in-hangzhou',
         icon: 'i-mdi-school',
       },
       {
-        label: 'Tours in Hangzhou',
+        label: 'tours-in-hangzhou',
         path: '/living-in-hangzhou/tours-in-hangzhou',
         icon: 'i-mdi-train-car',
       },
     ],
   },
   {
-    label: 'About chinese',
+    label: 'about-chinese',
     path: '/about-chinese',
     icon: 'i-mdi-post-outline',
     sub: [
       {
-        label: 'One sentence a day',
+        label: 'one-sentence-a-day',
         path: '/about-chinese/daily-sentence',
         icon: 'i-mdi-chat',
       },
       {
-        label: 'Tongue twist',
+        label: 'tongue-twist',
         path: '/about-chinese/tongue-twist',
         icon: 'i-mdi-thumb-up',
       },
       {
-        label: 'Traditional culture',
+        label: 'traditional-culture',
         path: '/about-chinese/traditional-culture',
         icon: 'i-mdi-silverware-variant',
       },
       {
-        label: 'Spoken Chinese',
+        label: 'spoken-chinese',
         path: '/about-chinese/spoken-chinese',
         icon: 'i-mdi-emoticon-excited-outline',
       },
     ],
   },
   {
-    label: 'Contact us',
+    label: 'contact-us',
     path: '/contact-us',
     icon: 'i-mdi-email-outline',
   },

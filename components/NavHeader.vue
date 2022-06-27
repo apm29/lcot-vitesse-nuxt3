@@ -35,10 +35,11 @@ const [showMenu, toggleMenu] = useToggle()
         }"
         :to="routeDefaultPath(routeItem)"
       >
-        {{ routeItem.label }}
+        {{ $t(routeItem.label) }}
       </router-link>
     </nav>
     <div flex="grow" />
+    <LocaleSwitch />
     <nav self="center" md:hidden inline @click="toggleMenu()">
       <i i-mdi-menu inline-block text="2xl" />
     </nav>

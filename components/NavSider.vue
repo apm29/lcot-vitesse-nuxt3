@@ -23,7 +23,7 @@ const { isActive, hasSideBar, activeRoute } = useRouteConfigs()
         top="2"
         absolute vertical="text-top"
       />
-      {{ subRoute.label }}
+      {{ $t(subRoute.label) }}
     </router-link>
   </nav>
 </template>

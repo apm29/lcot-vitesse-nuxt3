@@ -11,17 +11,17 @@ const { travelToContact, ContactTypes } = useContact()
       bg="gray-100 opacity-55" gap="y-3"
     >
       <h2 text="3xl dark-300 center" max="!w-8/10" font-extrabold>
-        Study Mandarin Chinese On Tour For Fun
+        {{ $t("Study Mandarin Chinese On Tour For Fun") }}
       </h2>
       <h3 text="xl dark-200 center">
-        Want to learn Chinese?
+        {{ $t("Want to learn Chinese?") }}
       </h3>
       <div flex="~" items="center" gap="x-3">
         <button bg="sky-400 hover:sky-600" p="x-3 y-1" text="white" rounded-full @click="travelToContact(ContactTypes.GET_STARTED)">
-          Get Started
+          {{ $t("Get Started") }}
         </button>
         <button bg="sky-400 hover:sky-600" p="x-3 y-1" text="white" rounded-full @click="travelToContact(ContactTypes.ONE_ON_ONE_CLASS)">
-          1 on 1 Class
+          {{ $t("1 on 1 Class") }}
         </button>
       </div>
     </div>

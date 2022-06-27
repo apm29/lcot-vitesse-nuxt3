@@ -14,12 +14,12 @@ definePageMeta({
     <div p="x-5">
       <h3 pl="5" text="2xl dark-600 left" font="bold" m="y-16">
         <i i-carbon-crowd-report text="sky-500" inline-block vertical="text-top" />
-        Meet Our Full-time Mandarin Teachers On tour in Hangzhou
+        {{ $t("Meet Our Full-time Mandarin Teachers On tour in Hangzhou") }}
       </h3>
       <DashboardTeachers />
       <h3 pl="5" text="2xl dark-600 left" font="bold" m="y-16">
         <i i-carbon-crowd-report text="sky-500" inline-block vertical="text-top" />
-        Why Us
+        {{ $t("Why Us") }}
       </h3>
       <ul class="why-us__list" text="lg left" m="b-12 x-1rem md:x-4rem" font="sans" list="disc" leading-snug>
         <li>Flexibility – you decide where and when you would like to have your class with our private Mandarin tutor.</li>
