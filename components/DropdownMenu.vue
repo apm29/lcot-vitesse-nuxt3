@@ -29,6 +29,11 @@ function handleOptionSelected(item, value) {
 const trigger = ref()
 const { width, height, right, top, left, bottom } = useElementBounding(trigger)
 const { width: windowWidth, height: windowHeight } = useWindowSize()
+
+const dropdown = ref()
+onClickOutside(dropdown, () => {
+  show.value = false
+})
 </script>
 
 <template>
@@ -46,6 +51,7 @@ const { width: windowWidth, height: windowHeight } = useWindowSize()
   </button>
   <ul
     v-show="show"
+    ref="dropdown"
     fixed="~"
     :style="{
       top: `${bottom + 10}px`,
