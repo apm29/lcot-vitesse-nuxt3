@@ -26,34 +26,27 @@ function handleBeforeSubmit() {
 async function handleSubmit() {
   try {
     loading.value = true
-    const response = await fetch(
-    `${BASE_URL}/java/auth/mail/sendIt`,
-    {
-      method: 'POST',
-      mode: 'cors', // no-cors, *cors, same-origin
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'include', // include, *same-origin, omit
-      headers: {
-        'Content-Type': 'application/json',
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+    const response = await $fetch(
+      `/api/mail/send`,
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          fullName: name.value,
+          country: country.value,
+          email: email.value,
+          inquiry: inquiry.value,
+        }),
+        ssr: false
       },
-      body: JSON.stringify({
-        fullName: name.value,
-        country: country.value,
-        email: email.value,
-        inquiry: inquiry.value,
-      }),
-    },
     )
-    const resJson = await response.json()
-    if (resJson?.code === 200) {
-      alert(`Success:${resJson.msg}`)
+    if (response?.code === 200) {
+      alert(`发送成功`)
       form.value.reset()
     }
-    else { alert(`Error:${resJson.msg}`) }
+    else { alert(`发送失败`) }
   }
   catch (error) {
-    alert(JSON.stringify(error))
+    alert(`发送失败`)
   }
   finally {
     loading.value = false
@@ -77,13 +70,8 @@ async function handleSubmit() {
       <q-input v-model="inquiry" :dark="dark" type="textarea" w-full name="inquiry" placeholder="your inquiry here..." />
     </fieldset>
     <fieldset>
-      <button
-        bg-sky-500 text-white font-bold rounded w-full
-        outline="focus:none"
-        p="x-4 y-1"
-        :loading="loading" color="facebook" block type="button"
-        @click="handleBeforeSubmit"
-      >
+      <button bg-sky-500 text-white font-bold rounded w-full outline="focus:none" p="x-4 y-1" :loading="loading"
+        color="facebook" block type="button" @click="handleBeforeSubmit">
         Submit
       </button>
     </fieldset>
@@ -92,7 +80,7 @@ async function handleSubmit() {
 
 <style scoped>
 fieldset {
- margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 </style>
 
