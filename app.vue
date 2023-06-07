@@ -16,7 +16,7 @@ useHead({
       defer: true,
     },
     {
-      src: 'https://hm.baidu.com/hm.js?07416ce7e4223fdd5fc5d971e25553b7',
+      src: 'https://hm.baidu.com/hm.js?2e2d2b5ea988bb701213e047138bdf61',
     },
   ],
   link: [{
